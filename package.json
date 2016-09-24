@@ -6,12 +6,10 @@
   "license": "MIT",
   "dependencies": {
     "gulp-concat": "^2.6.0",
-    "imagemin-gifsicle": "^5.1.0",
     "jquery": "^2.1.0",
     "materialize-css": "^0.97.7"
   },
   "devDependencies": {
-    "grunt-contrib-imagemin": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-minify-css": "^1.2.4",
@@ -20,9 +18,6 @@
     "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.9",
-    "install": "^0.8.1",
-    "node-sass": "^3.10.0",
-    "npm": "^3.10.8",
     "vinyl-source-stream": "^1.1.0"
   }
 }

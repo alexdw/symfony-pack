@@ -20,6 +20,9 @@
     "gulp-uglifyjs": "^0.6.2",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.9",
+    "install": "^0.8.1",
+    "node-sass": "^3.10.0",
+    "npm": "^3.10.8",
     "vinyl-source-stream": "^1.1.0"
   }
 }

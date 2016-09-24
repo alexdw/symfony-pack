@@ -4,11 +4,12 @@ require __DIR__ . '/recipe/symfony3.php';
 
 // Set configurations
 set('repository', 'git@github.com:alexdw/symfony-pack.git');
+env('branch', 'feature/deploy');
 set('shared_files', ['app/config/parameters.yml']);
 
 
 // Configure servers
-server('prod', '54.93.44.118')
+server('prod', '52.59.229.245')
     ->user('ubuntu')
     ->pemFile('~/PEM/Master.pem')
     ->env('deploy_path', '/var/www/html');
@@ -25,11 +26,14 @@ task('parameters', function () {
 });
 
 task("gulp", function(){
-    runLocally("gulp");
-    upload('web/js', '{{release_path}}/web/js');
-    upload('web/css', '{{release_path}}/web/css');
-    upload('web/img', '{{release_path}}/web/img');
-    upload('web/fonts', '{{release_path}}/web/fonts');
+    cd("{{release_path}}");
+    run("npm install --no-optional");
+    run("gulp");
+    //runLocally("gulp");
+    //upload('web/js', '{{release_path}}/web/js');
+    //upload('web/css', '{{release_path}}/web/css');
+    //upload('web/img', '{{release_path}}/web/img');
+    //upload('web/fonts', '{{release_path}}/web/fonts');
 });
 
 before('deploy', 'config');

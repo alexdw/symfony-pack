@@ -10,6 +10,7 @@
     "materialize-css": "^0.97.7"
   },
   "devDependencies": {
+    "grunt-contrib-imagemin": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-minify-css": "^1.2.4",

@@ -26,14 +26,14 @@ task('parameters', function () {
 });
 
 task("gulp", function(){
-    cd("{{release_path}}");
-    run("npm install --no-optional");
-    run("gulp");
-    //runLocally("gulp");
-    //upload('web/js', '{{release_path}}/web/js');
-    //upload('web/css', '{{release_path}}/web/css');
-    //upload('web/img', '{{release_path}}/web/img');
-    //upload('web/fonts', '{{release_path}}/web/fonts');
+    //cd("{{release_path}}");
+    //run("npm install --no-optional");
+    //run("gulp");
+    runLocally("gulp");
+    upload('web/js', '{{release_path}}/web/js');
+    upload('web/css', '{{release_path}}/web/css');
+    upload('web/img', '{{release_path}}/web/img');
+    upload('web/fonts', '{{release_path}}/web/fonts');
 });
 
 before('deploy', 'config');

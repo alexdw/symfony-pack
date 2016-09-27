@@ -9,10 +9,7 @@ set('shared_files', ['app/config/parameters.yml']);
 
 
 // Configure servers
-server('prod', '52.59.229.245')
-    ->user('ubuntu')
-    ->pemFile('~/PEM/Master.pem')
-    ->env('deploy_path', '/var/www/html');
+serverList("app/config/servers.yml");
 
 $config = function () {
     set("parameters", askConfirmation("¿Subir parameters local?"));

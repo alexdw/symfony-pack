@@ -1,0 +1,13 @@
+ec2:
+  host: 54.93.89.245
+  user: ubuntu
+  pem_file: ~/PEM/Master.pem
+  stage: prod
+  deploy_path: /var/www/html
+
+local:
+  host: 192.168.1.90
+  user: deployer
+  identity_file: ~
+  stage: stage
+  deploy_path: /var/www/html

@@ -11,11 +11,11 @@ set('shared_files', ['app/config/parameters.yml']);
 // Configure servers
 serverList("app/config/servers.yml");
 
-$config = function () {
-    set("parameters", askConfirmation("¿Subir parameters local?"));
-};
 
-task("config", $config);
+task("config", function(){
+    $host = env("server.host");
+    set("parameters", askConfirmation('¿Subir parameters local? ( ' . $host . ' )'));
+});
 task('parameters', function () {
     if (get("parameters")) {
         upload('app/config/parameters.yml', '{{release_path}}/app/config/parameters.yml');

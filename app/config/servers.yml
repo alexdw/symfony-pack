@@ -5,9 +5,9 @@ ec2:
   stage: prod
   deploy_path: /var/www/html
 
-local:
-  host: 192.168.1.90
-  user: deployer
-  identity_file: ~
-  stage: stage
-  deploy_path: /var/www/html
+# local:
+#   host: 192.168.1.90
+#   user: deployer
+#   identity_file: ~
+#   stage: prod
+#   deploy_path: /var/www/innnsite/phpsevilla
